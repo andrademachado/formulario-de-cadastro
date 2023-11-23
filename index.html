@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Formulário de Cadastro </h1>
+            <form id="form-cadastro" >
+                <div class="form-campo">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome">
+                </div>
+                <div class="form-campo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" placeholder="exemplo@email.com">
+                </div>
+                <div class="form-campo">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone">
+                </div>
+                <div class="form-campo">
+                    <label for="cpf">CPF:</label>
+                    <input type="cpf" id="cpf">
+                </div>
+                <div class="form-campo">
+                    <label for="rua">Endereço :</label>
+                    <input type="text"  placeholder="Rua,Avenida,Estrada,logradouro "  >                  
+                </div>
+                <div class="form-campo">
+                    <label for="numero">Número:</label>
+                    <input type="num" id="número"  >                  
+                </div>
+                <div class="form-campo">
+                    <label for="municipio"> Município  :</label>
+                    <input type="text" placeholder="Cidade  "  >               
+                </div>
+                <div class="form-campo">
+                    <label for="uf"> UF :</label>
+                    <input type="text" placeholder=" Estado " id="uf"  >               
+                </div>
+                <div class="form-campo">
+                    <label for="cep">CEP:</label>
+                    <input type="cep" id="CEP">
+                    
+                </div>
+                <button id="btn" type="submit">Enviar</button>
+            </form>
+        </div>
+    </header>
+    <div id="telefone"></div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="mask/jquery.mask.min.js" ></script>
+    <script>
+        $(document).ready(function(){
+
+        $('#telefone').mask('(00)00000-0000')
+
+        $('#CEP').mask('00000-000')
+
+        $('#cpf').mask('000.000.000-00')
+
+        $('#num').mask('0000')
+
+        })
+    </script>
+    <script src="./main.js"></script>
+</body>
+</html>
